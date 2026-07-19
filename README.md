@@ -37,7 +37,7 @@ reference/      Install shells and deployment notes (as builds mature)
 
 ## Related
 
-- **Planning / study delivery:** [Digital-Twin](https://github.com/Museum-Planning-LLC/Digital-Twin) (when published)
+- **Planning / study delivery:** [Digital-Twin](https://github.com/Museum-Planning-LLC/Digital-Twin) — study factory, Practitioner Twin, resiliency-studies
 - **Live demo (Shared Ground):** [museumplanning.com/immersive-mexico/en/shared-ground.html](https://museumplanning.com/immersive-mexico/en/shared-ground.html)
 - **Art / proof installations:** [walhimer.github.io](https://walhimer.github.io) (canonical artwork — link, do not substitute)
 
