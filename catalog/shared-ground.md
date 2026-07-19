@@ -31,7 +31,7 @@ Each **instantiation** uses **local archive** and the same underlying interactio
 - Repositioned gallery where **shared authority** matters more than a single curatorial voice
 - Study flagged **reactivation** of a room suited to communal, presence-driven experience
 
-Not the default reference for pure science simulation (flow tanks, cloud chambers) — use another catalog entry when added; same Interactive Digital delivery, different interaction model.
+Not the default reference for pure science simulation — use [flow-field-grid](./flow-field-grid.md). For place-led local history or comparison humanities, see [local-history-place](./local-history-place.md) and [humanities-field](./humanities-field.md). Matrix: [../docs/template-matrix.md](../docs/template-matrix.md).
 
 ## Demo links (do not substitute)
 

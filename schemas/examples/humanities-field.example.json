@@ -1,0 +1,33 @@
+{
+  "institution": {
+    "name": "Example Regional Heritage Center",
+    "studyReference": "resiliency-study-2026-EXAMPLE"
+  },
+  "zone": {
+    "label": "Reading room gallery — kiosk cluster",
+    "reactivation": "consolidate",
+    "floorPlanRef": "study/twin/reading-room.pdf"
+  },
+  "formFactor": "kiosk",
+  "interactionModel": {
+    "catalogRef": "catalog/humanities-field.md",
+    "summary": "Visitor pairs artifacts or texts; field holds juxtaposition without merge",
+    "participation": "mixed"
+  },
+  "content": {
+    "domains": ["material-culture", "literature", "music-history"],
+    "audiences": ["general-public", "research-visitors"],
+    "languages": ["en"],
+    "archiveScale": "Curated node set — objects, excerpts, clips with rights cleared"
+  },
+  "install": {
+    "offlineRequired": true,
+    "sensing": "Touch",
+    "display": "Single 4K portrait or landscape kiosk",
+    "audio": "Headphone jack or localized speaker per station"
+  },
+  "capitalBand": {
+    "note": "Stub — core not built",
+    "rangeUsd": "lower–mid tier kiosk"
+  }
+}

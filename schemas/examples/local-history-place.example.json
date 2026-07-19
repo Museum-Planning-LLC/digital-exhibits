@@ -1,0 +1,33 @@
+{
+  "institution": {
+    "name": "Example County Historical Society",
+    "studyReference": "resiliency-study-2026-EXAMPLE"
+  },
+  "zone": {
+    "label": "Main street gallery — consolidated footprint",
+    "reactivation": "reactivate",
+    "floorPlanRef": "study/twin/main-street-gallery.pdf"
+  },
+  "formFactor": "full-wall",
+  "interactionModel": {
+    "catalogRef": "catalog/local-history-place.md",
+    "summary": "Map-led layers; place position reveals archive fragments",
+    "participation": "presence"
+  },
+  "content": {
+    "domains": ["local-history", "built-environment", "oral-history"],
+    "audiences": ["residents", "visitors", "students"],
+    "languages": ["en"],
+    "archiveScale": "Geo-tagged photos, maps, documents by block or building"
+  },
+  "install": {
+    "offlineRequired": true,
+    "sensing": "Touch map or floor-position proxy",
+    "display": "Wall projection or large direct-view",
+    "audio": "Optional location-triggered clips"
+  },
+  "capitalBand": {
+    "note": "Stub — core not built",
+    "rangeUsd": "mid tier full-wall or kiosk — TBD at scoping"
+  }
+}

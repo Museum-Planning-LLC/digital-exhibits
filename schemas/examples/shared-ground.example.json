@@ -1,0 +1,33 @@
+{
+  "institution": {
+    "name": "Example History Museum",
+    "studyReference": "resiliency-study-2026-EXAMPLE"
+  },
+  "zone": {
+    "label": "Gallery C — reactivated community wing",
+    "reactivation": "reactivate",
+    "floorPlanRef": "study/twin/gallery-c.pdf"
+  },
+  "formFactor": "full-room",
+  "interactionModel": {
+    "catalogRef": "catalog/shared-ground.md",
+    "summary": "Plural memory; social geometry drives archive convergence",
+    "participation": "social-geometry"
+  },
+  "content": {
+    "domains": ["local-history", "political-memory", "plural-community"],
+    "audiences": ["community-a", "community-b"],
+    "languages": ["en"],
+    "archiveScale": "200+ photographs per site; emotional register tags"
+  },
+  "install": {
+    "offlineRequired": true,
+    "sensing": "Overhead depth cameras, multi-person",
+    "display": "4–6 wall projection, edge-blended",
+    "audio": "Ambient keyed to relational state"
+  },
+  "capitalBand": {
+    "note": "Indicative — scope after on-site read",
+    "rangeUsd": "upper tier full-room"
+  }
+}

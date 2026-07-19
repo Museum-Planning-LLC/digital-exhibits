@@ -16,23 +16,26 @@ This repo is **downstream of planning**, not a product sold cold. It supports th
 
 See [docs/form-factors.md](./docs/form-factors.md).
 
-## Catalog
+## Catalog — four templates (90-day internal flush)
 
-Reference builds and instantiations (content and interaction model vary by institution):
+Reference patterns for menu-funded work. **Not sold cold. Not shown publicly during flush.**
 
-| Entry | Form factor | Subject |
-|-------|-------------|---------|
-| [Shared Ground](./catalog/shared-ground.md) | Full-room immersive | Plural memory, shared meaning on common ground |
+| # | Entry | Domain | Form factor | Status |
+|---|-------|--------|-------------|--------|
+| 1 | [Shared Ground](./catalog/shared-ground.md) | Humanities / political memory | Full-room | Demo exists |
+| 2 | [Flow field grid](./catalog/flow-field-grid.md) | Science | Full-wall / kiosk | Core POC · layers TBD |
+| 3 | [Local history · place](./catalog/local-history-place.md) | Local history | Full-wall / kiosk | Stub |
+| 4 | [Humanities field](./catalog/humanities-field.md) | Humanities (compare) | Kiosk / wall | Stub |
 
-Additional themes (nautical, science simulation, local history, etc.) use the same delivery capability with different content packages — not separate product lines.
+See [docs/template-matrix.md](./docs/template-matrix.md) · example specs in [schemas/examples/](./schemas/examples/).
 
 ## Repository layout
 
 ```
-docs/           Principles, form factors, menu language for board packets
-schemas/        Institution-agnostic experience specification (JSON)
-catalog/        Reference entries: spec, demo links, interaction model
-reference/      Install shells and deployment notes (as builds mature)
+docs/           Principles, form factors, menu language, template matrix
+schemas/        experience-spec.json + examples/ per catalog template
+catalog/        Four template entries + layer gap checklists
+reference/      Install shells and wrapped demos (as builds mature)
 ```
 
 ## Related

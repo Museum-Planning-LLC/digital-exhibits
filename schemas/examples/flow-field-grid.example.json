@@ -1,0 +1,33 @@
+{
+  "institution": {
+    "name": "Example Science Center",
+    "studyReference": "resiliency-study-2026-EXAMPLE"
+  },
+  "zone": {
+    "label": "Gallery 2 — water and atmosphere",
+    "reactivation": "consolidate",
+    "floorPlanRef": "study/twin/gallery-2.pdf"
+  },
+  "formFactor": "full-wall",
+  "interactionModel": {
+    "catalogRef": "catalog/flow-field-grid.md",
+    "summary": "Parameter-driven flow field; visitor explores turbulence and bias",
+    "participation": "simulation"
+  },
+  "content": {
+    "domains": ["science-flow", "fluid-dynamics", "weather"],
+    "audiences": ["general-public", "school-groups"],
+    "languages": ["en"],
+    "archiveScale": "N/A — procedural field; optional phenomenon labels"
+  },
+  "install": {
+    "offlineRequired": true,
+    "sensing": "Touch presets (kiosk) or wall-mounted UI",
+    "display": "Single large surface or dual projection",
+    "audio": "Optional — turbulence-linked ambient"
+  },
+  "capitalBand": {
+    "note": "POC core exists; presentation and shell TBD",
+    "rangeUsd": "mid tier full-wall"
+  }
+}
