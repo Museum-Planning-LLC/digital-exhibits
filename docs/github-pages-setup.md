@@ -6,29 +6,40 @@ Static POCs only. Not public marketing (`noindex` on index).
 
 https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html
 
-## One-time repo settings
+## Setup (after `pages-build-deployment` fails on `main`)
 
-1. **Settings → Pages**
-   - **Build and deployment → Source:** Deploy from a branch
-   - **Branch:** `main` · folder **`/ (root)`**
-   - Do **not** use GitHub Actions as the Pages source (no custom deploy workflow in this repo).
+The built-in **pages build and deployment** job often fails on org repos (token permissions). Use the **`gh-pages` branch** instead.
 
-2. **Settings → Actions → General → Workflow permissions**
-   - Select **Read and write permissions**
-   - Save (required for the built-in `pages-build-deployment` job).
+### 1. Workflow permissions
 
-3. **Actions** tab → open the latest failed **pages build and deployment** run → **Re-run all jobs**.
+**Settings → Actions → General → Workflow permissions**
 
-Deploy usually completes in 2–4 minutes.
+- Select **Read and write permissions**
+- Save
 
-## If deploy still fails
+### 2. Run the publish workflow
 
-| Symptom | Fix |
-|---------|-----|
-| `Startup failure` on a custom Pages workflow | Remove `.github/workflows/*pages*` — use branch deploy only |
-| `pages-build-deployment` fails after ~3 min | Confirm step 2 (read/write permissions); re-run job |
-| 404 after green deploy | Hard-refresh; wait ~1 min for CDN; confirm branch is `main` and folder is root |
-| Org policy error | Org **Settings → Actions** — allow workflows for this repo |
+Push to `main` (or **Actions → Publish internal reference to gh-pages → Run workflow**).
+
+Wait for a **green** run. It creates/updates the `gh-pages` branch with only `index.html`, `.nojekyll`, and `reference/`.
+
+### 3. Point Pages at `gh-pages` (not `main`)
+
+**Settings → Pages**
+
+| Setting | Value |
+|---------|--------|
+| Source | Deploy from a branch |
+| Branch | **`gh-pages`** |
+| Folder | **`/ (root)`** |
+
+Save. Ignore / disable deploy from **`main`** — that stops the failing `pages-build-deployment` runs.
+
+Deploy completes in ~1–2 minutes after the branch switch.
+
+### 4. Verify
+
+Open the target URL above. Hard refresh if needed.
 
 ## Local fallback
 
@@ -38,4 +49,11 @@ python3 -m http.server 8080
 # http://localhost:8080/reference/flow-field-grid-poc.html
 ```
 
-`.nojekyll` at repo root disables Jekyll so `reference/js/` is served as static files.
+## Troubleshooting
+
+| Symptom | Fix |
+|---------|-----|
+| `pages-build-deployment` keeps failing on `main` | Switch Pages source to **`gh-pages`** (step 3) |
+| Publish workflow fails on permissions | Step 1 — read/write workflow permissions |
+| 404 after green publish | Confirm Pages branch is **`gh-pages`**, not `main` |
+| Org policy error | Org **Settings → Actions** — allow workflows for this repo |
