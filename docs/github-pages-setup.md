@@ -1,50 +1,39 @@
 # GitHub Pages — internal reference
 
-Static POCs only. Not public marketing (`noindex` on index).
+## Working internal link (use this)
 
-## Target URL
+Org Actions policy blocks Pages deploy on **interactive-digital**. The POC is mirrored on **museum-database**, which already has live Pages:
 
-https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html
+**https://museum-planning-llc.github.io/museum-database/web/interactive-digital/flow-field-grid-poc.html**
 
----
-
-## If “Read and write permissions” is grayed out
-
-**Museum-Planning-LLC org policy** locks Actions to **read-only**. Repo workflows cannot push branches or deploy Pages. This is normal — fix with a **local publish** (below), not Actions settings.
-
-Org owners can optionally change: **Organization Settings → Actions → General → Workflow permissions** → allow read/write or let repos override.
+Source of truth remains [interactive-digital/reference/](../reference/). Re-copy to museum-database after POC changes (see below).
 
 ---
 
-## Publish from your Mac (recommended)
+## Why Actions keep failing
 
-No Actions token needed — uses your normal `git push` access.
+| Issue | Cause |
+|-------|--------|
+| Read/write grayed out | **Museum-Planning-LLC org** locks `GITHUB_TOKEN` to read-only |
+| `pages-build-deployment` fails | Built-in Pages job needs write/deploy permissions |
+| `(Unnamed workflow)` startup failure | Custom workflows removed — cannot run under org policy |
+| `.github` on `gh-pages` | Old publish script left workflows on branch — fixed in orphan script |
+
+Org owners can change: **Organization Settings → Actions → Workflow permissions**.
+
+---
+
+## Update the live mirror (after editing reference/)
 
 ```bash
-cd ~/Documents/GitHub/interactive-digital
-chmod +x _scripts/publish-gh-pages.sh
-./_scripts/publish-gh-pages.sh
+cp reference/flow-field-grid-poc.html ~/Documents/GitHub/museum-database/web/interactive-digital/
+cp reference/js/* ~/Documents/GitHub/museum-database/web/interactive-digital/js/
+# commit + push museum-database
 ```
-
-Then in GitHub:
-
-**Settings → Pages**
-
-| Setting | Value |
-|---------|--------|
-| Source | Deploy from a branch |
-| Branch | **`gh-pages`** |
-| Folder | **`/ (root)`** |
-
-Do **not** deploy from **`main`** (that triggers the failing `pages-build-deployment` job).
-
-Wait ~1–2 minutes, then open the target URL above.
-
-Re-run the script whenever `reference/` changes.
 
 ---
 
-## Local preview (no Pages)
+## Local preview
 
 ```bash
 cd ~/Documents/GitHub/interactive-digital
@@ -54,11 +43,12 @@ python3 -m http.server 8080
 
 ---
 
-## Troubleshooting
+## Optional: interactive-digital gh-pages (when org allows)
 
-| Symptom | Fix |
-|---------|-----|
-| Read/write grayed out in repo Settings | Org lock — use **`_scripts/publish-gh-pages.sh`** |
-| `pages-build-deployment` fails on `main` | Switch Pages source to **`gh-pages`**, not `main` |
-| Publish workflow fails in Actions | Expected under read-only org — ignore; use local script |
-| 404 after push | Confirm Pages branch is **`gh-pages`**; hard refresh |
+```bash
+./_scripts/publish-gh-pages.sh
+# Settings → Pages → gh-pages / (root)
+```
+
+Target URL (when org deploy works):  
+https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html

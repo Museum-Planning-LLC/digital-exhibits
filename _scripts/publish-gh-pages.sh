@@ -1,44 +1,27 @@
 #!/usr/bin/env bash
-# Publish reference/ to gh-pages for GitHub Pages (no Actions write token needed).
+# Publish reference/ to gh-pages (orphan branch — static files only, no .github).
+# Note: Museum-Planning-LLC org read-only Actions may still block pages-build-deployment.
+# Working internal URL today: museum-database/web/interactive-digital/ (see docs/github-pages-setup.md).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-cd "$ROOT"
-
-if ! git remote get-url origin >/dev/null 2>&1; then
-  echo "No origin remote." >&2
-  exit 1
-fi
-
 BUILD="$(mktemp -d)"
 trap 'rm -rf "$BUILD"' EXIT
 
-mkdir -p "$BUILD"
-cp index.html "$BUILD/"
-cp .nojekyll "$BUILD/"
-cp -R reference "$BUILD/"
+cp "$ROOT/index.html" "$BUILD/"
+cp "$ROOT/.nojekyll" "$BUILD/"
+cp -R "$ROOT/reference" "$BUILD/"
 
-echo "Built static site in temp dir ($(du -sh "$BUILD" | cut -f1))"
-
-# Orphan gh-pages branch in a detached worktree, force-push site root.
-WORKTREE="$(mktemp -d)"
-trap 'rm -rf "$BUILD" "$WORKTREE"' EXIT
-
-git fetch origin gh-pages 2>/dev/null || true
-
-git worktree add --force -B gh-pages "$WORKTREE" gh-pages 2>/dev/null \
-  || git worktree add --force -B gh-pages "$WORKTREE" main
-
-rm -rf "$WORKTREE"/*
-cp -R "$BUILD"/. "$WORKTREE"/
-
-cd "$WORKTREE"
+cd "$BUILD"
+git init -q
+git checkout -q -b gh-pages
 git add -A
-git commit -m "Publish internal reference $(date -u +%Y-%m-%dT%H:%MZ)" || true
-git push origin gh-pages
+git commit -q -m "Publish internal reference $(date -u +%Y-%m-%dT%H:%MZ)"
 
-git worktree remove "$WORKTREE" --force 2>/dev/null || true
+REMOTE="$(git -C "$ROOT" remote get-url origin)"
+git remote add origin "$REMOTE"
+git push -f origin gh-pages
 
 echo ""
-echo "Pushed gh-pages. In GitHub: Settings → Pages → branch gh-pages / (root)"
-echo "https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html"
+echo "Pushed orphan gh-pages (static files only)."
+echo "If Pages still 404, use museum-database mirror — see docs/github-pages-setup.md"

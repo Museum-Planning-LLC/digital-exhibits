@@ -6,10 +6,10 @@ Internal POC demos for the Interactive Digital catalog. **Not sold cold. Not pub
 |------|----------|-------|
 | [flow-field-grid-poc.html](./flow-field-grid-poc.html) | [flow-field-grid](../catalog/flow-field-grid.md) | Three.js r128 · local `js/` |
 
-**Internal link (GitHub Pages):**  
-https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html
+**Internal link (live):**  
+https://museum-planning-llc.github.io/museum-database/web/interactive-digital/flow-field-grid-poc.html
 
-Setup (if 404): [docs/github-pages-setup.md](../docs/github-pages-setup.md) — org Actions are read-only; publish with `_scripts/publish-gh-pages.sh` from your Mac.
+Mirrored from this folder — org Actions policy blocks Pages on interactive-digital. See [docs/github-pages-setup.md](../docs/github-pages-setup.md).
 
 Local fallback: `python3 -m http.server` from repo root → `/reference/flow-field-grid-poc.html`
 
