@@ -53,7 +53,7 @@ Distinct from [Shared Ground](./shared-ground.md): **simulation / exploration**,
 
 | Context | Path |
 |---------|------|
-| Three.js POC (internal) | https://museum-planning-llc.github.io/museum-database/web/interactive-digital/flow-field-grid-poc.html |
+| Three.js POC (internal) | https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html |
 | Three.js POC (repo) | [reference/flow-field-grid-poc.html](../reference/flow-field-grid-poc.html) |
 
 Origin: p5.js WEBGL sketch (~2024) → Three.js port for Interactive Digital reference stack.

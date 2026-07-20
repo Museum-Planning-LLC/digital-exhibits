@@ -1,54 +1,27 @@
 # GitHub Pages — internal reference
 
-## Working internal link (use this)
+**Repo:** [Museum-Planning-LLC/interactive-digital](https://github.com/Museum-Planning-LLC/interactive-digital)
 
-Org Actions policy blocks Pages deploy on **interactive-digital**. The POC is mirrored on **museum-database**, which already has live Pages:
+## Canonical files (edit here)
 
-**https://museum-planning-llc.github.io/museum-database/web/interactive-digital/flow-field-grid-poc.html**
+| File | GitHub |
+|------|--------|
+| POC HTML | [reference/flow-field-grid-poc.html](https://github.com/Museum-Planning-LLC/interactive-digital/blob/main/reference/flow-field-grid-poc.html) |
+| Three.js | [reference/js/](https://github.com/Museum-Planning-LLC/interactive-digital/tree/main/reference/js) |
 
-Source of truth remains [interactive-digital/reference/](../reference/). Re-copy to museum-database after POC changes (see below).
+## Internal live URL (when Pages is on)
 
----
+https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html
 
-## Why Actions keep failing
+**Settings → Pages:** deploy from branch **`main`**, folder **`/ (root)`**.  
+Repo root already has `index.html`, `.nojekyll`, and `reference/`.
 
-| Issue | Cause |
-|-------|--------|
-| Read/write grayed out | **Museum-Planning-LLC org** locks `GITHUB_TOKEN` to read-only |
-| `pages-build-deployment` fails | Built-in Pages job needs write/deploy permissions |
-| `(Unnamed workflow)` startup failure | Custom workflows removed — cannot run under org policy |
-| `.github` on `gh-pages` | Old publish script left workflows on branch — fixed in orphan script |
+Org Actions read/write may be grayed out — branch deploy from `main` does **not** need a custom workflow. Turn off Pages on this repo and re-enable from `main` if deploy is stuck.
 
-Org owners can change: **Organization Settings → Actions → Workflow permissions**.
-
----
-
-## Update the live mirror (after editing reference/)
-
-```bash
-cp reference/flow-field-grid-poc.html ~/Documents/GitHub/museum-database/web/interactive-digital/
-cp reference/js/* ~/Documents/GitHub/museum-database/web/interactive-digital/js/
-# commit + push museum-database
-```
-
----
-
-## Local preview
+## Local preview (always works)
 
 ```bash
 cd ~/Documents/GitHub/interactive-digital
 python3 -m http.server 8080
 # http://localhost:8080/reference/flow-field-grid-poc.html
 ```
-
----
-
-## Optional: interactive-digital gh-pages (when org allows)
-
-```bash
-./_scripts/publish-gh-pages.sh
-# Settings → Pages → gh-pages / (root)
-```
-
-Target URL (when org deploy works):  
-https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html
