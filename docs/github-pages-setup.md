@@ -1,20 +1,20 @@
-# GitHub Pages — internal reference
+# GitHub Pages — not used
 
-**Live proof (Museum Planning):**  
-https://museumplanning.com/interactive-digital/flow-field-grid.html
+**Live proof:** https://museumplanning.com/interactive-digital/  
+**Sim:** https://museumplanning.com/interactive-digital/flow-field-grid.html  
 
-**Source repo (edit here):**  
-https://github.com/Museum-Planning-LLC/interactive-digital/tree/main/reference
+Hosted on **website-2.0** (museumplanning.com), not this repo.
 
-**Website repo (deploy):**  
-`museum-planning-llc-website-2.0` → `interactive-digital/flow-field-grid.html`
+## Failed Actions on this repo
 
-After editing `reference/`, sync to website repo and push website-2.0 for museumplanning.com to update.
+Red **`pages-build-deployment`** and old workflow runs are from abandoned GitHub Pages attempts. They do **not** affect museumplanning.com.
 
-## Local preview
+**Stop new failures:** GitHub → **Settings → Pages → Source: None** (disable Pages for this repo).
 
-```bash
-cd ~/Documents/GitHub/interactive-digital
-python3 -m http.server 8080
-# http://localhost:8080/reference/flow-field-grid-poc.html
-```
+**Optional:** delete the `gh-pages` branch (legacy publish attempts only).
+
+## Edit workflow
+
+1. Edit `reference/` in this repo  
+2. Sync to `website-2.0/interactive-digital/`  
+3. Push **website-2.0** for museumplanning.com to update
