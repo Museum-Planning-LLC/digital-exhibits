@@ -23,7 +23,7 @@ Reference patterns for menu-funded work. **Not sold cold. Not shown publicly dur
 | # | Entry | Domain | Form factor | Status |
 |---|-------|--------|-------------|--------|
 | 1 | [Shared Ground](./catalog/shared-ground.md) | Humanities / political memory | Full-room | Demo exists |
-| 2 | [Flow field grid](./catalog/flow-field-grid.md) | Science | Full-wall / kiosk | [Live proof on museumplanning.com](https://museumplanning.com/interactive-digital/flow-field-grid.html) |
+| 2 | [Flow field grid](./catalog/flow-field-grid.md) | Science | Full-wall / kiosk | [Live proof on museumplanning.com](https://museumplanning.com/digital-exhibits/flow-field-grid.html) |
 | 3 | [Local history · place](./catalog/local-history-place.md) | Local history | Full-wall / kiosk | Stub |
 | 4 | [Humanities field](./catalog/humanities-field.md) | Humanities (compare) | Kiosk / wall | Stub |
 
@@ -42,8 +42,8 @@ reference/      Install shells and wrapped demos (as builds mature)
 
 | Template | URL |
 |----------|-----|
-| **Interactive Digital index** | https://museumplanning.com/interactive-digital/ |
-| **Flow field grid** | https://museumplanning.com/interactive-digital/flow-field-grid.html |
+| **Interactive Digital index** | https://museumplanning.com/digital-exhibits/ |
+| **Flow field grid** | https://museumplanning.com/digital-exhibits/flow-field-grid.html |
 | **Shared Ground** | https://museumplanning.com/immersive-mexico/en/shared-ground.html |
 
 Source code for flow field: [`reference/`](./reference/). Deploy via **website-2.0** — not GitHub Pages on this repo.
@@ -51,7 +51,7 @@ Source code for flow field: [`reference/`](./reference/). Deploy via **website-2
 ## Related
 
 - **Planning / study delivery:** [Digital-Twin](https://github.com/Museum-Planning-LLC/Digital-Twin)
-- **Website deploy:** [website-2.0](https://github.com/Museum-Planning-LLC/website-2.0) → museumplanning.com
+- **Website deploy:** [website-2.0](https://github.com/Museum-Planning-LLC/website-2.0) → museumplanning.com `/digital-exhibits/`
 
 ## Principles
 

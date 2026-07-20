@@ -23,7 +23,7 @@ Use only **after** a Resiliency Planning Study, when footprint analysis supports
 
 **Reference build (on request):** [Shared Ground](https://museumplanning.com/immersive-mexico/en/shared-ground.html) — full-room example, plural memory / shared meaning. Other themes use the same Interactive Digital delivery with different content and interaction models.
 
-**Repository:** [github.com/Museum-Planning-LLC/interactive-digital](https://github.com/Museum-Planning-LLC/interactive-digital)
+**Repository:** [github.com/Museum-Planning-LLC/digital-exhibits](https://github.com/Museum-Planning-LLC/digital-exhibits)
 
 **Fee:** [cost band per form factor — insert at scoping]
 

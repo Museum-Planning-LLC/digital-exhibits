@@ -1,20 +1,20 @@
-# GitHub Pages — not used
+# Deploy — digital-exhibits
 
-**Live proof:** https://museumplanning.com/interactive-digital/  
-**Sim:** https://museumplanning.com/interactive-digital/flow-field-grid.html  
+**Repo:** [Museum-Planning-LLC/digital-exhibits](https://github.com/Museum-Planning-LLC/digital-exhibits)  
+**Pages:** `main` branch · `/ (root)` · [museum-planning-llc.github.io/digital-exhibits/](https://museum-planning-llc.github.io/digital-exhibits/)
 
-Hosted on **website-2.0** (museumplanning.com), not this repo.
+## URLs
 
-## Failed Actions on this repo
-
-Red **`pages-build-deployment`** and old workflow runs are from abandoned GitHub Pages attempts. They do **not** affect museumplanning.com.
-
-**Stop new failures:** GitHub → **Settings → Pages → Source: None** (disable Pages for this repo).
-
-**Optional:** delete the `gh-pages` branch (legacy publish attempts only).
+| Context | URL |
+|---------|-----|
+| **GitHub Pages (from `main`)** | https://museum-planning-llc.github.io/digital-exhibits/ |
+| **Flow field POC (Pages)** | https://museum-planning-llc.github.io/digital-exhibits/reference/flow-field-grid-poc.html |
+| **Museum Planning index** | https://museumplanning.com/digital-exhibits/ |
+| **Museum Planning sim** | https://museumplanning.com/digital-exhibits/flow-field-grid.html |
 
 ## Edit workflow
 
-1. Edit `reference/` in this repo  
-2. Sync to `website-2.0/interactive-digital/`  
-3. Push **website-2.0** for museumplanning.com to update
+1. Edit `reference/` in **digital-exhibits** → push **`main`** (updates GitHub Pages)
+2. Sync to `website-2.0/digital-exhibits/` → push **website-2.0** (updates museumplanning.com)
+
+Two hosts, one source repo. Keep them in sync when the POC changes.

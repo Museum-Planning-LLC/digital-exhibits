@@ -10,11 +10,11 @@ Internal POC demos for the Interactive Digital catalog. **Not sold cold.**
 
 | | URL |
 |---|-----|
-| **Live proof (Museum Planning)** | https://museumplanning.com/interactive-digital/flow-field-grid.html |
-| **GitHub source** | https://github.com/Museum-Planning-LLC/interactive-digital/tree/main/reference |
+| **Live proof (Museum Planning)** | https://museumplanning.com/digital-exhibits/flow-field-grid.html |
+| **GitHub source** | https://github.com/Museum-Planning-LLC/digital-exhibits/tree/main/reference |
 | **Local dev** | `python3 -m http.server 8080` → `/reference/flow-field-grid-poc.html` |
 
-Deploy path: sync `reference/` → `website-2.0/interactive-digital/` on museumplanning.com.
+Deploy path: sync `reference/` → `website-2.0/digital-exhibits/` on museumplanning.com.
 
 ## Layer status (flow field POC)
 
