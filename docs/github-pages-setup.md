@@ -1,24 +1,17 @@
 # GitHub Pages — internal reference
 
-**Repo:** [Museum-Planning-LLC/interactive-digital](https://github.com/Museum-Planning-LLC/interactive-digital)
+**Live proof (Museum Planning):**  
+https://museumplanning.com/interactive-digital/flow-field-grid.html
 
-## Canonical files (edit here)
+**Source repo (edit here):**  
+https://github.com/Museum-Planning-LLC/interactive-digital/tree/main/reference
 
-| File | GitHub |
-|------|--------|
-| POC HTML | [reference/flow-field-grid-poc.html](https://github.com/Museum-Planning-LLC/interactive-digital/blob/main/reference/flow-field-grid-poc.html) |
-| Three.js | [reference/js/](https://github.com/Museum-Planning-LLC/interactive-digital/tree/main/reference/js) |
+**Website repo (deploy):**  
+`museum-planning-llc-website-2.0` → `interactive-digital/flow-field-grid.html`
 
-## Internal live URL (when Pages is on)
+After editing `reference/`, sync to website repo and push website-2.0 for museumplanning.com to update.
 
-https://museum-planning-llc.github.io/interactive-digital/reference/flow-field-grid-poc.html
-
-**Settings → Pages:** deploy from branch **`main`**, folder **`/ (root)`**.  
-Repo root already has `index.html`, `.nojekyll`, and `reference/`.
-
-Org Actions read/write may be grayed out — branch deploy from `main` does **not** need a custom workflow. Turn off Pages on this repo and re-enable from `main` if deploy is stuck.
-
-## Local preview (always works)
+## Local preview
 
 ```bash
 cd ~/Documents/GitHub/interactive-digital
